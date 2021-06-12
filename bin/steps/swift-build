@@ -1,4 +1,4 @@
 swift package edit CRuby
-./Packages/CRuby/cfg-cruby --mode custom --path /usr/lib/ruby/2.7.0
+./Packages/CRuby/cfg-cruby --mode custom --path /usr/lib/ruby
 puts-step "Building package ($SWIFT_BUILD_CONFIGURATION configuration)"
 PKG_CONFIG_PATH=$(pwd)/Packages/CRuby:$PKG_CONFIG_PATH swift build $SWIFT_BUILD_FLAGS -c "$SWIFT_BUILD_CONFIGURATION"
