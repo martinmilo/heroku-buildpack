@@ -41,12 +41,12 @@ fi
 
 mkdir -p "$CACHE_DIR/$STACK"
 
-if [[ $SWIFT_VERSION = 5* ]]; then
-  puts-step "Using built-in clang (Swift $SWIFT_VERSION)"
-else
-  source "$BIN_DIR/steps/clang"
-fi
-
+# if [[ $SWIFT_VERSION = 5* ]]; then
+#   puts-step "Using built-in clang (Swift $SWIFT_VERSION)"
+# else
+#   source "$BIN_DIR/steps/clang"
+# fi
+source "$BIN_DIR/steps/clang"
 source "$BIN_DIR/steps/swiftenv"
 
 cd $BUILD_DIR

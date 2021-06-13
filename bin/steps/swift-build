@@ -7,9 +7,6 @@ rvm autolibs disable
 puts-step "Installing Ruby"
 rvm install ruby-2.6.6
 
-puts-step "Installing clang"
-sudo apt install clang
-
 puts-step "Setting ruby path for CRuby"
 swift package edit CRuby
 ./Packages/CRuby/cfg-cruby --mode custom --path /app/.rvm/rubies/ruby-2.6.6
