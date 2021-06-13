@@ -1,7 +1,7 @@
 if [[ ! -d "$CACHE_DIR/$STACK/clang-$CLANG_VERSION" ]]; then
   puts-step "Installing clang $CLANG_VERSION"
   mkdir -p "$CACHE_DIR/$STACK/clang-$CLANG_VERSION"
-  curl https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz -s -L | xz -d -c | tar x -C $CACHE_DIR/$STACK/clang-$CLANG_VERSION --strip 1 &> /dev/null
+  curl https://releases.llvm.org/7.0.1/clang+llvm-7.0.1-x86_64-linux-gnu-ubuntu-18.04.tar.xz -s -L | xz -d -c | tar x -C $CACHE_DIR/$STACK/clang-$CLANG_VERSION --strip 1 &> /dev/null
 else
   puts-step "Using cached clang-$CLANG_VERSION"
 fi
