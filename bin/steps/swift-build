@@ -5,11 +5,11 @@ source ~/.rvm/scripts/rvm
 rvm autolibs disable
 
 puts-step "Installing Ruby"
-rvm install ruby-2.6.3
+rvm install ruby-2.6.6
 
 puts-step "Setting ruby path for CRuby"
 swift package edit CRuby
-./Packages/CRuby/cfg-cruby --mode custom --path /app/.rvm/rubies/ruby-2.6.3
+./Packages/CRuby/cfg-cruby --mode custom --path /app/.rvm/rubies/ruby-2.6.6
 
 puts-step "Building package ($SWIFT_BUILD_CONFIGURATION configuration)"
 PKG_CONFIG_PATH=$(pwd)/Packages/CRuby:$PKG_CONFIG_PATH swift build $SWIFT_BUILD_FLAGS -c "$SWIFT_BUILD_CONFIGURATION"
